@@ -12,6 +12,7 @@
 		7ADC6C2421A24B0200FE5A76 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7ADC6C2221A24B0200FE5A76 /* Main.storyboard */; };
 		7ADC6C2621A24B0500FE5A76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7ADC6C2521A24B0500FE5A76 /* Assets.xcassets */; };
 		7ADC6C2921A24B0500FE5A76 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7ADC6C2721A24B0500FE5A76 /* LaunchScreen.storyboard */; };
+		7ADC6C4521A2521200FE5A76 /* UIImage+Rotate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ADC6C4421A2521200FE5A76 /* UIImage+Rotate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,9 @@
 		7ADC6C2521A24B0500FE5A76 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7ADC6C2821A24B0500FE5A76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7ADC6C2A21A24B0500FE5A76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7ADC6C4221A2521000FE5A76 /* BBTransformXDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BBTransformXDemo-Bridging-Header.h"; sourceTree = "<group>"; };
+		7ADC6C4321A2521100FE5A76 /* UIImage+Rotate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Rotate.h"; sourceTree = "<group>"; };
+		7ADC6C4421A2521200FE5A76 /* UIImage+Rotate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Rotate.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,10 +60,13 @@
 			children = (
 				7ADC6C1E21A24B0200FE5A76 /* AppDelegate.swift */,
 				7ADC6C2021A24B0200FE5A76 /* ViewController.swift */,
+				7ADC6C4321A2521100FE5A76 /* UIImage+Rotate.h */,
+				7ADC6C4421A2521200FE5A76 /* UIImage+Rotate.m */,
 				7ADC6C2221A24B0200FE5A76 /* Main.storyboard */,
 				7ADC6C2521A24B0500FE5A76 /* Assets.xcassets */,
 				7ADC6C2721A24B0500FE5A76 /* LaunchScreen.storyboard */,
 				7ADC6C2A21A24B0500FE5A76 /* Info.plist */,
+				7ADC6C4221A2521000FE5A76 /* BBTransformXDemo-Bridging-Header.h */,
 			);
 			path = BBTransformXDemo;
 			sourceTree = "<group>";
@@ -96,6 +103,7 @@
 				TargetAttributes = {
 					7ADC6C1A21A24B0200FE5A76 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -137,6 +145,7 @@
 			files = (
 				7ADC6C2121A24B0200FE5A76 /* ViewController.swift in Sources */,
 				7ADC6C1F21A24B0200FE5A76 /* AppDelegate.swift in Sources */,
+				7ADC6C4521A2521200FE5A76 /* UIImage+Rotate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +291,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = BBTransformXDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -290,6 +300,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.MQ.BBTransformXDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BBTransformXDemo/BBTransformXDemo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -299,6 +311,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = BBTransformXDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -307,6 +320,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.MQ.BBTransformXDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BBTransformXDemo/BBTransformXDemo-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

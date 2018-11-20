@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,59 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BBTransformXDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Msw-vz-Nf3">
+                                <rect key="frame" x="0.0" y="328.5" width="375" height="10"/>
+                                <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="10" id="kXH-gj-pOb"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="birthday_envelope_lid_close" translatesAutoresizingMaskIntoConstraints="NO" id="x93-bR-rkg">
+                                <rect key="frame" x="35.5" y="288.5" width="304" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="v33-Pt-KaC"/>
+                                    <constraint firstAttribute="width" constant="304" id="z9Q-7Y-Us7"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="birthday_envelope_lid_open" translatesAutoresizingMaskIntoConstraints="NO" id="dy6-I4-3Dj">
+                                <rect key="frame" x="35.5" y="188.5" width="304" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="7VK-PL-C2b"/>
+                                    <constraint firstAttribute="width" constant="304" id="BTR-5X-wqo"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Msw-vz-Nf3" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Jwz-AN-WIQ"/>
+                            <constraint firstItem="x93-bR-rkg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Jyv-bc-n2M"/>
+                            <constraint firstItem="Msw-vz-Nf3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="TaU-Cd-I3v"/>
+                            <constraint firstItem="x93-bR-rkg" firstAttribute="top" secondItem="dy6-I4-3Dj" secondAttribute="bottom" constant="10" id="UV2-xR-rNY"/>
+                            <constraint firstItem="dy6-I4-3Dj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Wxv-rh-NI4"/>
+                            <constraint firstItem="x93-bR-rkg" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="dZ2-c8-yUY"/>
+                            <constraint firstItem="Msw-vz-Nf3" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="jrL-0Y-Jgy"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="closeImgV" destination="x93-bR-rkg" id="uGb-Yy-DY3"/>
+                        <outlet property="closeImgVCons" destination="dZ2-c8-yUY" id="64Q-XU-pnQ"/>
+                        <outlet property="gap" destination="UV2-xR-rNY" id="Yrq-5y-5Kf"/>
+                        <outlet property="openImgV" destination="dy6-I4-3Dj" id="aij-cA-std"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="37.600000000000001" y="25.637181409295355"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="birthday_envelope_lid_close" width="304" height="90"/>
+        <image name="birthday_envelope_lid_open" width="304" height="90"/>
+    </resources>
 </document>
